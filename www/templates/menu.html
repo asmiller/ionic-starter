@@ -1,0 +1,21 @@
+<ion-side-menus>
+
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7 bar-dark">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-pane>
+
+    <ion-side-menu side="left">
+        <ion-content>
+            <ion-list>
+                <a class="item" nav-clear menu-close href="/">Home</a>
+                <a class="item" nav-clear menu-close href="/about">About</a>
+                <a ng-show="user.name" class="item" nav-clear menu-close href="/settings">Settings</a>
+                <a ng-show="user.name" class="item" nav-clear menu-close ng-click="user.logout()">Logout</a>
+                <a ng-show="!user.name" class="item" nav-clear menu-close ng-click="user.login()">Login</a>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

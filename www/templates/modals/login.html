@@ -1,0 +1,24 @@
+<div class="modal" ng-controller="LoginCtrl">
+    <ion-header-bar>
+        <h1 class="title">Login</h1>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <form ng-submit="login()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="loginData.username">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="loginData.password">
+                </label>
+                <label class="item">
+                    <button ng-show="!loginSuccess" class="button button-block button-positive" ng-class="{'button-positive':!loggingIn}" type="submit">{{loggingIn && 'Logging In...' || 'Log in'}}</button>
+                    <span ng-show="loginSuccess">Success!</span>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</div>
+
